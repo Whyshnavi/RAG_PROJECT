@@ -2,44 +2,34 @@
 This project implements a Retrieval-Augmented Generation (RAG) pipeline using LangChain and Google Generative AI embeddings.
 The system retrieves relevant context from external sources and augments the input prompt for improved responses from LLMs
 
-🚀 Features
+#Features
 
 Load documents from the web using LangChain WebBaseLoader
-
 Split text into chunks with RecursiveCharacterTextSplitter
-
 Store and query embeddings using Chroma Vector Database
-
 Use Google Generative AI embeddings for semantic search
-
 Combine retrieval + LLM with a custom prompting pipeline
-
 End-to-end RAG workflow in a Jupyter Notebook
 
-🛠️ Tech Stack
+#Tech Stack
 
-Python 3.x
-
+Python 3.12
 LangChain
-
 Chroma
-
 Google Generative AI Embeddings
-
 BeautifulSoup (bs4)
-
 OS & Warnings (utility)
 
-📂 Project Structure
+# Project Structure
 RAG_project.ipynb   # Main notebook containing the RAG pipeline
 README.md           # Project documentation
 requirements.txt    # Python dependencies (optional)
 
-⚙️ Installation
+#Installation
 
 Clone this repository:
 
-git clone https://github.com/<your-username>/rag-project.git
+git clone https://github.com/WHYSHNAVI/RAG_PROJECT.git
 cd rag-project
 
 
@@ -52,7 +42,7 @@ Add your Google Generative AI API Key:
 
 export GOOGLE_API_KEY="your_api_key"
 
-▶️ Usage
+# Usage
 
 Run the Jupyter Notebook:
 
@@ -69,7 +59,7 @@ Store embeddings in Chroma.
 
 Query with RAG pipeline.
 
-📊 Example Workflow
+#Example Workflow
 
 Input query: "Explain LangChain RAG in simple terms"
 

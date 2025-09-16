@@ -25,7 +25,7 @@ RAG_project.ipynb   # Main notebook containing the RAG pipeline
 README.md           # Project documentation
 requirements.txt    # Python dependencies (optional)
 
-#Installation
+# Installation
 
 Clone this repository:
 
@@ -51,23 +51,19 @@ jupyter notebook RAG_project.ipynb
 
 Inside the notebook:
 
-Load your dataset/web content.
+  Load your dataset/web content.
+  Split text into chunks.
+  Store embeddings in Chroma.
+  Query with RAG pipeline.
 
-Split text into chunks.
-
-Store embeddings in Chroma.
-
-Query with RAG pipeline.
-
-#Example Workflow
+# Example Workflow
 
 Input query: "Explain LangChain RAG in simple terms"
 
-Retriever fetches context from knowledge base.
+   Retriever fetches context from knowledge base. 
+   LLM generates an answer using query + context.
 
-LLM generates an answer using query + context.
-
-✅ Future Improvements
+# Future Improvements
 
 Add support for multiple vector DBs (Pinecone, Weaviate).
 

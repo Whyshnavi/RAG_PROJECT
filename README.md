@@ -6,23 +6,32 @@ It retrieves relevant context from external sources and augments user queries be
 
 # Features
 
-Built and tested in Google Colab (no local setup required)
+Built and tested in Google Colab 
+
 Load documents from the web using LangChain WebBaseLoader
+
 Split text into chunks with RecursiveCharacterTextSplitter
+
 Store and query embeddings using Chroma Vector Database
+
 Use Google Generative AI embeddings for semantic search
+
 End-to-end RAG workflow in a Jupyter Notebook
 
 # Files
 
 RAG_PROJECT.ipynb → The main Colab notebook with the full pipeline
+
 README.md → Project documentation
 
 # How to Run (Google Colab)
 
 Open the notebook in Google Colab:
+
 Click here: Open in Colab
+
 Upload the RAG_project.ipynb file
+
 Install required dependencies inside Colab:
  
   !pip install langchain langchain_chroma langchain_community langchain_core langchain_google_genai langchain_text_splitters bs4
@@ -48,11 +57,14 @@ Run the notebook cells step by step:
 # Example Workflow
 
 Input query: "Explain LangChain RAG in simple terms"
+
 Retriever fetches context from documents.
 LLM generates an enriched answer using both the query and context.
 
 # Future Improvements
 
 Add more document loaders (PDF, CSV, etc.)
+
 Try other vector databases (Pinecone, Weaviate, FAISS)
+
 Deploy as a Streamlit or Gradio app for interaction

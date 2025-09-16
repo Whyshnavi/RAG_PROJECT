@@ -24,12 +24,14 @@ Open the notebook in Google Colab:
 Click here: Open in Colab
 Upload the RAG_project.ipynb file
 Install required dependencies inside Colab:
+ 
   !pip install langchain langchain_chroma langchain_community langchain_core langchain_google_genai langchain_text_splitters bs4
 
 
 Add your Google Generative AI API Key in Colab:
 
 import os
+
 os.environ["GOOGLE_API_KEY"] = "your_api_key_here"
 
 

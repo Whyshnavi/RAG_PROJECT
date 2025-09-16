@@ -38,8 +38,11 @@ os.environ["GOOGLE_API_KEY"] = "your_api_key_here"
 Run the notebook cells step by step:
 
   Load data (web/documents)
+  
   Chunk text and create embeddings
+  
   Store in Chroma vector database
+  
   Query and generate answers with RAG
 
 # Example Workflow

@@ -1,72 +1,53 @@
-# RAG_PROJECT
-This project implements a Retrieval-Augmented Generation (RAG) pipeline using LangChain and Google Generative AI embeddings.
-The system retrieves relevant context from external sources and augments the input prompt for improved responses from LLMs
+# RAG Project (Retrieval-Augmented Generation)
 
-#Features
+This project demonstrates a Retrieval-Augmented Generation (RAG) pipeline implemented in Google Colab using LangChain and Google Generative AI embeddings.
+It retrieves relevant context from external sources and augments user queries before passing them to a Large Language Model (LLM) for more accurate answers.
 
+
+# Features
+
+Built and tested in Google Colab (no local setup required)
 Load documents from the web using LangChain WebBaseLoader
 Split text into chunks with RecursiveCharacterTextSplitter
 Store and query embeddings using Chroma Vector Database
 Use Google Generative AI embeddings for semantic search
-Combine retrieval + LLM with a custom prompting pipeline
 End-to-end RAG workflow in a Jupyter Notebook
 
-#Tech Stack
+# Files
 
-Python 3.12
-LangChain
-Chroma
-Google Generative AI Embeddings
-BeautifulSoup (bs4)
-OS & Warnings (utility)
+RAG_PROJECT.ipynb → The main Colab notebook with the full pipeline
+README.md → Project documentation
 
-# Project Structure
-RAG_project.ipynb   # Main notebook containing the RAG pipeline
-README.md           # Project documentation
-requirements.txt    # Python dependencies (optional)
+# How to Run (Google Colab)
 
-# Installation
-
-Clone this repository:
-
-git clone https://github.com/WHYSHNAVI/RAG_PROJECT.git
-cd rag-project
+Open the notebook in Google Colab:
+Click here: Open in Colab
+Upload the RAG_project.ipynb file
+Install required dependencies inside Colab:
+  !pip install langchain langchain_chroma langchain_community langchain_core langchain_google_genai langchain_text_splitters bs4
 
 
-Create a virtual environment and install dependencies:
+Add your Google Generative AI API Key in Colab:
 
-pip install -r requirements.txt
-
-
-Add your Google Generative AI API Key:
-
-export GOOGLE_API_KEY="your_api_key"
-
-# Usage
-
-Run the Jupyter Notebook:
-
-jupyter notebook RAG_project.ipynb
+import os
+os.environ["GOOGLE_API_KEY"] = "your_api_key_here"
 
 
-Inside the notebook:
+Run the notebook cells step by step:
 
-  Load your dataset/web content.
-  Split text into chunks.
-  Store embeddings in Chroma.
-  Query with RAG pipeline.
+  Load data (web/documents)
+  Chunk text and create embeddings
+  Store in Chroma vector database
+  Query and generate answers with RAG
 
 # Example Workflow
 
 Input query: "Explain LangChain RAG in simple terms"
-
-   Retriever fetches context from knowledge base. 
-   LLM generates an answer using query + context.
+Retriever fetches context from documents.
+LLM generates an enriched answer using both the query and context.
 
 # Future Improvements
 
-Add support for multiple vector DBs (Pinecone, Weaviate).
-
-Create a Streamlit/Gradio app for interactive demo.
-
-Deploy RAG pipeline as an API.
+Add more document loaders (PDF, CSV, etc.)
+Try other vector databases (Pinecone, Weaviate, FAISS)
+Deploy as a Streamlit or Gradio app for interaction
